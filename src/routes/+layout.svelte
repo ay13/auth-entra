@@ -1,4 +1,5 @@
 <script>
+	import { SignIn } from "@auth/sveltekit/components"
 	import Header from './Header.svelte';
 	import '../app.css';
 
@@ -10,6 +11,7 @@
 	<Header />
 
 	<main>
+		<SignIn provider="azure-ad" signInPage="signin" />
 		{@render children()}
 	</main>
 
